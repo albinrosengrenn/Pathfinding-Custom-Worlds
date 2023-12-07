@@ -1,9 +1,16 @@
-class Room {
+import {Terrain} from "./terrain.js";
+export class Room {
     constructor(){
         this.name = "";
         this.id = 0;
         this.exits = [];
-        this.terrain = [];
+        this.terrain = false;
+        this.i = 0;
+        this.j = 0;
+        this.g = 0;
+        this.f = 0;
+        this.h = 0;
+        this.randomTerrain();
     }
 
     generateRoomName(){
@@ -24,5 +31,20 @@ class Room {
         }
         
         return string;
+    }
+
+    randomTerrain(){
+        if(random(1) < 0.3){
+            this.terrain = true;
+        }
+    }
+
+    show(room){
+        fill(room);
+        if(this.terrain){
+            fill(0)
+        }
+        noStroke;
+        rect(this.i*10, this.j*10, 10-1, 10-1)
     }
 }
