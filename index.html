@@ -7,6 +7,29 @@
     <title>Pathfinding Through Custom Worlds</title>
   </head>
   <body>
+    <div id="flexbox">
+      <div id="terrainEdit">
+        <h1>Terrain Editor</h1>
+        <div>
+          <button id="saveBtn">Save World</button>
+          <button id="loadBtn">Load World</button>
+        </div>
+        <label for="worldType">Type of World:</label>
+        <select id="worldType" name="worldType">
+          <option value="square">Square</option>
+          <option value="branched">Branched</option>
+          <option value="circle">Circle</option>
+          <option value="string">String</option>
+        </select>
+        <label for="inputRooms">Number of Rooms:</label>
+        <input type="number" id="inputRooms" placeholder="Enter number of rooms here">
+        <label for="inputField">Input Field:</label>
+        <input type="text" id="inputField" placeholder="Enter text here">
+        <button>Generate World</button>
+        
+        
+      </div>
+    </div>
     <script type="module" src="./sketch.js"></script>
   </body>
 </html>

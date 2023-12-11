@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(42, 42, 42);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#terrainEdit {
+    width: 300px;
+    height: 500px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#terrainEdit h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4caf50;
+}
+
+#terrainEdit button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#terrainEdit button:hover {
+    background-color: #45a049;
+}
+
+#terrainEdit label {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#terrainEdit input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+#terrainEdit input[type="number"]::-webkit-inner-spin-button,
+#terrainEdit input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#terrainEdit button:active {
+    transform: translateY(2px);
+}
+
+#terrainEdit select {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+#terrainEdit select:hover,
+#terrainEdit select:focus,
+#terrainEdit input:hover,
+#terrainEdit input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+#terrainEdit button#saveBtn,
+#terrainEdit button#loadBtn {
+    background-color: #333;
+    color: #fff;
+}
+
+#terrainEdit button#saveBtn:hover,
+#terrainEdit button#loadBtn:hover {
+    background-color: #4caf50;
+}

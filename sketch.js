@@ -24,7 +24,8 @@ let path = [];
 let current;
 
 sketch.setup=function(){
-    createCanvas(500,500);
+    let canvas = createCanvas(500,500);
+    canvas.parent("flexbox");
 
     myWorld = new World(2500, "square");
     console.log(myWorld.data)
