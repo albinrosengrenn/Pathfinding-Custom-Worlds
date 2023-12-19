@@ -23,11 +23,32 @@ let sideLength;
 let path = [];
 let current;
 
+let type;
+let nrOfRooms;
+let generateWorldBtn = document.querySelector("#generateWorld");
+
+generateWorldBtn.addEventListener("click", generateWorld);
+
+function generateWorld(){
+    type = document.querySelector("#worldType").value;
+    nrOfRooms = parseInt(document.querySelector("#inputRooms").value);
+    myWorld = new World(nrOfRooms, type)
+    openSet = [myWorld.data[0]];
+    closedSet = [];
+    path = [];
+    end = myWorld.data[myWorld.data.length-1];
+    myWorld.data[0].terrain = false;
+    myWorld.data[myWorld.data.length-1].terrain = false;
+    sketch.draw();
+}
+
 sketch.setup=function(){
     let canvas = createCanvas(500,500);
     canvas.parent("flexbox");
 
-    myWorld = new World(2500, "square");
+    type = document.querySelector("#worldType").value;
+    nrOfRooms = parseInt(document.querySelector("#inputRooms").value);
+    myWorld = new World(nrOfRooms, type);
     console.log(myWorld.data)
     console.log(myWorld.data.length)
 
@@ -39,6 +60,8 @@ sketch.setup=function(){
     end.terrain = false;
     openSet.push(start);
 }
+
+
 
 sketch.draw = function() {
     if(openSet.length > 0){

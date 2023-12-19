@@ -14,9 +14,10 @@ export class World {
                 this.generateCircleWorld();
                 break;
             case "square":
-                /*if(!Number.isInteger(Math.sqrt(parseInt(document.querySelector("#rooms").value)))){
+                if(!Number.isInteger(Math.sqrt(parseInt(document.querySelector("#inputRooms").value)))){
+                    console.log("ENTER PERFECT SQUARE")
                     break;
-                }*/
+                }
                 this.generateSquareWorld();
                 break;
         }
